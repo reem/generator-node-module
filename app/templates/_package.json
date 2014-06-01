@@ -1,5 +1,10 @@
 {
-  "name": "package",
+  "name": "<%= _.slugify(moduleName) %>",
   "version": "0.0.0",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    mocha: "*",
+    gulp: "*",
+    must: "*"
+  }
 }
