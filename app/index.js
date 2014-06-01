@@ -33,30 +33,19 @@ var NodeModuleGenerator = yeoman.generators.Base.extend({
     {
       name: 'moduleVar',
       message: 'What should your module be imported as?'
-    },
-    {
-      type: 'confirm',
-      name: 'library',
-      message: 'Is this a library?'
     }];
 
     this.prompt(prompts, function (props) {
       this.moduleName = props.moduleName;
       this.moduleVar  = props.moduleVar;
-      this.isLibrary  = props.library;
 
       done();
     }.bind(this));
   },
 
   app: function () {
-    if (this.isLibrary) {
-      this.mkdir('lib');
-      this.template('_lib/_index.js', 'lib/index.js');
-    } else {
-      this.mkdir('bin');
-      this.template('_bin/_index.js', 'bin/index.js');
-    }
+    this.mkdir('lib');
+    this.template('_lib/_index.js', 'lib/index.js');
 
     this.mkdir('tests');
     this.template('_tests/_index.js');
