@@ -1,5 +1,4 @@
 'use strict';
-var util   = require('util');
 var yeoman = require('yeoman-generator');
 var yosay  = require('yosay');
 var chalk  = require('chalk');
@@ -65,6 +64,8 @@ var NodeModuleGenerator = yeoman.generators.Base.extend({
     this.mkdir('examples');
     this.template('_examples/_example.js', 'example.js');
 
+    this.copy('.editorconfig', '.editorconfig');
+    this.copy('.jshintrc', '.jshintrc');
     this.template('_gulpfile.js', 'gulpfile.js');
     this.template('_package.json', 'package.json');
   },
