@@ -53,8 +53,8 @@ var NodeModuleGenerator = yeoman.generators.Base.extend({
     this.mkdir('examples');
     this.template('_examples/_example.js', 'example.js');
 
-    this.copy('.editorconfig', '.editorconfig');
-    this.copy('.jshintrc', '.jshintrc');
+    this.copy('editorconfig', '.editorconfig');
+    this.copy('jshintrc', '.jshintrc');
     this.template('_gulpfile.js', 'gulpfile.js');
     this.template('_package.json', 'package.json');
   },
