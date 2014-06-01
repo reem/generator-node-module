@@ -1,4 +1,4 @@
-var <%= moduleVar %> = require('<%= moduleName %>');
+var <%= moduleVar %> = require('../lib');
 var demand = require('must');
 
 define('<%= moduleName %>', function () {
