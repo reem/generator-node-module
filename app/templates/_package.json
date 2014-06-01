@@ -4,7 +4,9 @@
   "dependencies": {},
   "devDependencies": {
     mocha: "*",
+    must: "*",
     gulp: "*",
-    must: "*"
+    gulp-jshint: "*",
+    gulp-mocha: "*"
   }
 }
