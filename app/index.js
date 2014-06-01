@@ -2,7 +2,7 @@
 var yeoman = require('yeoman-generator');
 var yosay  = require('yosay');
 var chalk  = require('chalk');
-var _      = require('lodash');
+var _str   = require('underscore.string');
 
 var NodeModuleGenerator = yeoman.generators.Base.extend({
   init: function () {
@@ -37,7 +37,7 @@ var NodeModuleGenerator = yeoman.generators.Base.extend({
 
     this.prompt(prompts, function (props) {
       this.origModuleName = props.moduleName;
-      this.moduleName = _.slugify(props.moduleName);
+      this.moduleName = _str.slugify(props.moduleName);
       this.moduleVar  = props.moduleVar;
 
       done();
