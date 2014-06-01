@@ -7,7 +7,7 @@
   "repository": "reem/generator-node-module",
   "author": {
     "name": "Jonathan Reem",
-    "email": "",
+    "email": "jonathan.reem@gmail.com",
     "url": "https://github.com/reem"
   },
   "engines": {
@@ -20,7 +20,9 @@
     "app"
   ],
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator",
+    "scaffold",
+    "lightweight"
   ],
   "dependencies": {
     "chalk": "~0.4.0",
