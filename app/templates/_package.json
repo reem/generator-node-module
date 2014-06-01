@@ -8,6 +8,7 @@
     "must": "*",
     "gulp": "*",
     "gulp-jshint": "*",
-    "gulp-mocha": "*"
+    "gulp-mocha": "*",
+    "jshint-stylish": "*"
   }
 }
