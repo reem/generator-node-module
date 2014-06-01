@@ -48,10 +48,10 @@ var NodeModuleGenerator = yeoman.generators.Base.extend({
     this.template('_lib/_index.js', 'lib/index.js');
 
     this.mkdir('tests');
-    this.template('_tests/_index.js');
+    this.template('_tests/_index.js', 'tests/index.js');
 
     this.mkdir('examples');
-    this.template('_examples/_example.js', 'example.js');
+    this.template('_examples/_example.js', 'examples/example.js');
 
     this.copy('editorconfig', '.editorconfig');
     this.copy('jshintrc', '.jshintrc');
