@@ -21,11 +21,17 @@ describe('node-module generator', function () {
     var expected = [
       // add files you expect to exist here.
       '.jshintrc',
-      '.editorconfig'
+      '.editorconfig',
+      'package.json',
+      'gulpfile.js',
+      'examples/example.js',
+      'lib/index.js',
+      'tests/index.js'
     ];
 
     helpers.mockPrompt(this.app, {
-      'someOption': true
+      'moduleName': 'Test Module',
+      'moduleVar': 'test'
     });
     this.app.options['skip-install'] = true;
     this.app.run({}, function () {
