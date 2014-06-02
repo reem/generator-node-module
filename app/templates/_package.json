@@ -2,7 +2,9 @@
   "name": "<%= moduleName %>",
   "version": "0.0.0",
   "dependencies": {},
-  "test": "gulp test",
+  "scripts": {
+    "test": "./node_modules/gulp/bin/gulp.js test"
+  },
   "devDependencies": {
     "mocha": "*",
     "must": "*",
