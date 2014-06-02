@@ -4,4 +4,7 @@ node_js:
 before_install:
   - currentfolder=${PWD##*/}
   - if [ "$currentfolder" != 'generator-node-module' ]; then cd .. && eval "mv $currentfolder generator-node-module" && cd generator-node-module; fi
+email:
+    on_success: never
+    on_failure: always
 
