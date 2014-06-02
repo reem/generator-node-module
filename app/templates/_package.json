@@ -5,6 +5,11 @@
   "scripts": {
     "test": "./node_modules/gulp/bin/gulp.js test"
   },
+  "author": {
+    "url": "https://github.com/<%= github %>"
+  },
+  "main": "./lib/index.js",
+  "repository": "<%= github %>/<%= moduleName %>",
   "devDependencies": {
     "mocha": "*",
     "must": "*",
