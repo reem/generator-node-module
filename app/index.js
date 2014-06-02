@@ -27,18 +27,34 @@ var NodeModuleGenerator = yeoman.generators.Base.extend({
 
     var prompts = [
     {
+      name: 'github',
+      message: 'What\'s your github handle?'
+    },
+    {
       name: 'moduleName',
       message: 'What\'s your module called?'
     },
     {
       name: 'moduleVar',
       message: 'What should your module be imported as?'
+    },
+    {
+      name: 'moduleDescription',
+      message: 'What is this module?'
+    },
+    {
+      name: 'license',
+      message: 'What license do you want to publish this under?',
+      default: 'MIT'
     }];
 
     this.prompt(prompts, function (props) {
-      this.origModuleName = props.moduleName;
-      this.moduleName = _str.slugify(props.moduleName);
-      this.moduleVar  = props.moduleVar;
+      this.origModuleName    = props.moduleName;
+      this.moduleName        = _str.slugify(props.moduleName);
+      this.moduleVar         = props.moduleVar;
+      this.moduleDescription = props.moduleDescription;
+      this.github            = props.github;
+      this.license           = props.license;
 
       done();
     }.bind(this));
@@ -60,11 +76,8 @@ var NodeModuleGenerator = yeoman.generators.Base.extend({
 
     this.template('_gulpfile.js', 'gulpfile.js');
     this.template('_package.json', 'package.json');
-  },
 
-  projectfiles: function () {
-    this.copy('editorconfig', '.editorconfig');
-    this.copy('jshintrc', '.jshintrc');
+    this.template('_README.md', 'README.md');
   }
 });
 

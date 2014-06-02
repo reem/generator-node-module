@@ -26,12 +26,15 @@ describe('node-module generator', function () {
       'gulpfile.js',
       'examples/example.js',
       'lib/index.js',
-      'tests/index.js'
+      'tests/index.js',
+      'README.md'
     ];
 
     helpers.mockPrompt(this.app, {
       'moduleName': 'Test Module',
-      'moduleVar': 'test'
+      'moduleVar': 'test',
+      'moduleDescription': 'test description',
+      'github': 'sample github'
     });
     this.app.options['skip-install'] = true;
     this.app.run({}, function () {
