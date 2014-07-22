@@ -73,6 +73,7 @@ var NodeModuleGenerator = yeoman.generators.Base.extend({
     this.copy('editorconfig', '.editorconfig');
     this.copy('jshintrc', '.jshintrc');
     this.copy('travis.yml', '.travis.yml');
+    this.copy('gitignore', '.gitignore');
 
     this.template('_gulpfile.js', 'gulpfile.js');
     this.template('_package.json', 'package.json');
